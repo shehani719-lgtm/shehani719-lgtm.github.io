@@ -9,23 +9,13 @@
 @media(min-width:1181px){.hero,.section,.nav-wrap{max-width:1120px}}
 @media(max-width:760px){.nav-wrap{padding:0 20px;height:60px}.menu-toggle{display:block;margin-left:auto;margin-right:14px}.nav-links{display:none;position:absolute;top:60px;left:0;right:0;height:auto;background:#061523;border-bottom:1px solid var(--line);padding:10px 20px 16px;flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{height:auto;padding:10px 0}.nav-links a.active:after{bottom:4px;right:auto;width:32px}.hero{grid-template-columns:1fr;padding:42px 22px 26px;gap:12px}.hero-visual{height:200px;order:2}.screen{height:190px;max-width:370px}.mini-panel{height:65px}.bar-chart{height:36px}.donut{width:38px;height:38px}.donut:after{width:20px;height:20px;top:9px;left:9px}.hero-copy{max-width:520px}.section{padding-left:22px;padding-right:22px}.about{grid-template-columns:1fr;gap:24px;padding-top:25px}.quick-facts{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-art{height:120px}.skills-grid{grid-template-columns:1fr 1fr;gap:16px}.skill-group:nth-child(2){border:0}.skill-group:nth-child(3){border:0}.contact{min-height:175px}.thank-you{left:auto;right:25px;transform:rotate(-8deg);font-size:20px}.footer-decoration{opacity:.35}}
 @media(max-width:480px){.hero h1{font-size:34px}.hero h2{font-size:16px}.hero-actions .button{padding:9px 14px}.section-heading{font-size:18px}.project-grid{grid-template-columns:1fr}.project-art{height:145px}.art-dashboard{height:100px}.project-body h3{font-size:13px}.project-body>p:not(.tool){font-size:11px}.skills-grid{grid-template-columns:1fr 1fr}.skill-group{padding-right:7px}.skill{width:65px}.about-meta{gap:8px}.about-meta span,.about-meta a{border:0}.thank-you{display:none}.contact{padding-top:22px;padding-bottom:26px}}
-.project-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
 .netflix-art {
   height: 180px;
-  padding: 8px;
-  box-sizing: border-box;
   overflow: hidden;
 }
 
 .netflix-art .project-image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
