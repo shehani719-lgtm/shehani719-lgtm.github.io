@@ -25,3 +25,4 @@
   flex-shrink: 0;
   margin: 0;
 }
+.skills-grid{grid-template-columns:1fr 1fr 1fr 1.35fr;align-items:start}
