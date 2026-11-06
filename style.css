@@ -31,3 +31,43 @@
   gap: 12px;
   align-items: start;
 }
+/* Subtle floating background particles */
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.14;
+
+    background-image:
+        radial-gradient(circle, rgba(88, 189, 255, 0.35) 1px, transparent 1.8px),
+        radial-gradient(circle, rgba(88, 189, 255, 0.25) 1px, transparent 1.8px);
+
+    background-size: 170px 170px, 230px 230px;
+    background-position: 0 0, 70px 90px;
+
+    animation: softParticleDrift 60s linear infinite;
+}
+
+@keyframes softParticleDrift {
+    from {
+        background-position: 0 0, 70px 90px;
+    }
+
+    to {
+        background-position: 170px 170px, 300px 320px;
+    }
+}
+
+/* Disable movement for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
+    }
+}
