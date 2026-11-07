@@ -31,7 +31,8 @@
   gap: 12px;
   align-items: start;
 }
-/* Subtle floating background particles */
+
+/* Soft floating background particles */
 body {
     position: relative;
     isolation: isolate;
@@ -40,32 +41,37 @@ body {
 body::before {
     content: "";
     position: fixed;
-    inset: -20%;
-    z-index: -1;
+    inset: 0;
+    z-index: 0;
     pointer-events: none;
-    opacity: 0.14;
+    opacity: 0.38;
 
     background-image:
-        radial-gradient(circle, rgba(88, 189, 255, 0.35) 1px, transparent 1.8px),
-        radial-gradient(circle, rgba(88, 189, 255, 0.25) 1px, transparent 1.8px);
+        radial-gradient(circle, rgba(88, 189, 255, 0.55) 1px, transparent 2px),
+        radial-gradient(circle, rgba(88, 189, 255, 0.35) 1px, transparent 2px),
+        radial-gradient(circle, rgba(120, 190, 230, 0.3) 1px, transparent 2px);
 
-    background-size: 170px 170px, 230px 230px;
-    background-position: 0 0, 70px 90px;
+    background-size: 150px 150px, 210px 210px, 260px 260px;
+    background-position: 0 0, 60px 90px, 120px 40px;
 
-    animation: softParticleDrift 60s linear infinite;
+    animation: particleFloat 45s linear infinite;
 }
 
-@keyframes softParticleDrift {
+/* Keep portfolio content above the particles */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes particleFloat {
     from {
-        background-position: 0 0, 70px 90px;
+        background-position: 0 0, 60px 90px, 120px 40px;
     }
-
     to {
-        background-position: 170px 170px, 300px 320px;
+        background-position: 150px 150px, 270px 300px, 380px 300px;
     }
 }
 
-/* Disable movement for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
     body::before {
         animation: none;
