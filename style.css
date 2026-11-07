@@ -100,3 +100,38 @@ main {
 .hero h1 > .typing-name > span {
     color: var(--blue2);
 }
+/* Homepage Profile Photo */
+.hero-visual.hero-photo {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 350px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+.profile-hero-image {
+    display: block;
+    width: 100%;
+    max-width: 370px;
+    max-height: 390px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    filter: drop-shadow(0 0 22px rgba(41, 167, 255, 0.18));
+}
+
+@media (max-width: 768px) {
+    .hero-visual.hero-photo {
+        min-height: auto;
+        margin-top: 25px;
+    }
+
+    .profile-hero-image {
+        max-width: 280px;
+        max-height: 320px;
+    }
+}
