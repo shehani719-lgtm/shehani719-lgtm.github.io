@@ -92,3 +92,11 @@ main {
         animation: none;
     }
 }
+/* Keep Kaveesha white and Shehani blue */
+.hero h1 > .typing-name {
+    color: var(--text);
+}
+
+.hero h1 > .typing-name > span {
+    color: var(--blue2);
+}
