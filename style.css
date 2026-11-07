@@ -50,3 +50,45 @@ main {
     position: relative;
     z-index: 1;
 }
+/* Typing animation for name only */
+.typing-name {
+    display: inline-block;
+    white-space: nowrap;
+    width: fit-content;
+    overflow: hidden;
+    vertical-align: bottom;
+    clip-path: inset(0 100% 0 0);
+    animation: nameTyping 2.5s steps(16, end) forwards;
+}
+
+.typing-name::after {
+    content: "|";
+    color: var(--blue2);
+    animation: cursorBlink 0.8s step-end infinite;
+}
+
+@keyframes nameTyping {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes cursorBlink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .typing-name {
+        animation: none;
+        clip-path: none;
+    }
+
+    .typing-name::after {
+        animation: none;
+    }
+}
